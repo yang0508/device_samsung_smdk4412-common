@@ -27,11 +27,26 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 # Init files
 PRODUCT_COPY_FILES := \
-    $(COMMON_PATH)/init.smdk4x12.usb.rc:root/init.smdk4x12.usb.rc \
+    $(COMMON_PATH)/init.SHV-E210K.usb.rc:root/init.SHV-E210K.usb.rc \
+    $(COMMON_PATH)/init.SHV-E210S.usb.rc:root/init.SHV-E210S.usb.rc \
     $(COMMON_PATH)/lpm.rc:root/lpm.rc \
     $(COMMON_PATH)/init.trace.rc:root/init.trace.rc \
-    $(COMMON_PATH)/ueventd.smdk4x12.rc:root/ueventd.smdk4x12.rc \
-    $(COMMON_PATH)/ueventd.smdk4x12.rc:recovery/root/ueventd.smdk4x12.rc
+    $(COMMON_PATH)/ueventd.SHV-E210K.rc:root/ueventd.SHV-E210K.rc \
+    $(COMMON_PATH)/ueventd.SHV-E210S.rc:root/ueventd.SHV-E210S.rc \
+    $(COMMON_PATH)/ueventd.SHV-E210K.rc:recovery/root/ueventd.SHV-E210K.rc \
+    $(COMMON_PATH)/ueventd.SHV-E210S.rc:recovery/root/ueventd.SHV-E210S.rc
+
+# Add boeffla init script
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/sbin/boeffla-init.sh:root/sbin/boeffla-init.sh \
+    $(COMMON_PATH)/sbin/tinyplay:root/sbin/tinyplay \
+    $(COMMON_PATH)/res/bc/bccontroller.sh:root/res/bc/bccontroller.sh \
+    $(COMMON_PATH)/res/bc/fix_permissions:root/res/bc/fix_permissions \
+    $(COMMON_PATH)/res/bc/fstrim:root/res/bc/fstrim \
+    $(COMMON_PATH)/res/misc/boeffla-config-reset-v2.zip:root/res/misc/boeffla-config-reset-v2.zip \
+    $(COMMON_PATH)/res/misc/install-recovery.sh:root/res/misc/install-recovery.sh \
+    $(COMMON_PATH)/res/misc/silence.wav:root/res/misc/silence.wav \
+    $(COMMON_PATH)/res/misc/su:root/res/misc/su
 
 # Audio
 PRODUCT_COPY_FILES += \
