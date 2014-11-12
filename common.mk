@@ -27,16 +27,16 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 # Init files
 PRODUCT_COPY_FILES := \
-    $(COMMON_PATH)/rootdir/init.SHV-E210K.rc:root/init.SHV-E210K.rc \
-    $(COMMON_PATH)/rootdir/init.SHV-E210S.rc:root/init.SHV-E210S.rc \
-    $(COMMON_PATH)/rootdir/init.SHV-E210K.usb.rc:root/init.SHV-E210K.usb.rc \
-    $(COMMON_PATH)/rootdir/init.SHV-E210S.usb.rc:root/init.SHV-E210S.usb.rc \
+    $(COMMON_PATH)/rootdir/init.SHW-M440S.rc:root/init.SHW-M440S.rc \
+    $(COMMON_PATH)/rootdir/init.smdk4x12.rc:root/init.smdk4x12.rc \
+    $(COMMON_PATH)/rootdir/init.SHW-M440S.usb.rc:root/init.SHW-M440S.usb.rc \
+    $(COMMON_PATH)/rootdir/init.smdk4x12.usb.rc:root/init.smdk4x12.usb.rc \
     $(COMMON_PATH)/rootdir/lpm.rc:root/lpm.rc \
     $(COMMON_PATH)/rootdir/init.trace.rc:root/init.trace.rc \
-    $(COMMON_PATH)/rootdir/ueventd.SHV-E210K.rc:root/ueventd.SHV-E210K.rc \
-    $(COMMON_PATH)/rootdir/ueventd.SHV-E210S.rc:root/ueventd.SHV-E210S.rc \
-    $(COMMON_PATH)/rootdir/ueventd.SHV-E210K.rc:recovery/root/ueventd.SHV-E210K.rc \
-    $(COMMON_PATH)/rootdir/ueventd.SHV-E210S.rc:recovery/root/ueventd.SHV-E210S.rc
+    $(COMMON_PATH)/rootdir/ueventd.SHW-M440S.rc:root/ueventd.SHW-M440S.rc \
+    $(COMMON_PATH)/rootdir/ueventd.smdk4x12.rc:root/ueventd.smdk4x12.rc \
+    $(COMMON_PATH)/rootdir/ueventd.SHW-M440S.rc:recovery/root/ueventd.SHW-M440S.rc \
+    $(COMMON_PATH)/rootdir/ueventd.smdk4x12.rc:recovery/root/ueventd.smdk4x12.rc
 
 # Add boeffla init script
 PRODUCT_COPY_FILES += \
